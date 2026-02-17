@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alfan To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <main class="app-shell">
+        <header class="app-header">
+            <h1>To-Do List</h1>
+            <p>Organize your tasks and stay productive every day.</p>
+        </header>
+
+        <section class="panel">
+            <h2>Create To-Do</h2>
+            <form id="todoForm" class="todo-form">
+                <div class="field">
+                    <label for="todoName">Name of To-Do</label>
+                    <input id="todoName" type="text" placeholder="Example : create a new project" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="todoDate">Date</label>
+                        <input id="todoDate" type="date" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="todoDeadline">Deadline</label>
+                        <input id="todoDeadline" type="date" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="todoStatus">Status</label>
+                    <select id="todoStatus" required>
+                        <option value="pending">Pending</option>
+                        <option value="on progress">On Progress</option>
+                        <option value="done">Done</option>
+                        <option value="cancel">Cancel</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Read To-Do List</h2>
+            <ul id="todoList" class="todo-list"></ul>
+            <p id="emptyState" class="empty-state">No tasks available yet.</p>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
